@@ -20,14 +20,92 @@
 					<li class="main-navigation-item">
 						<img class="logo-header" src="#" alt="Лого Глейси">
 					</li>
-					<li class="main-navigation-item"><a class="navigation-link" href="#">Каталог</a></li>
+					<li class="main-navigation-item">
+						<a class="navigation-link" href="#">Каталог</a>
+						<ul class="navigation-popup-items">
+							<li class="navigation-popup-item">
+								<p>Напитки</p>
+								<ul class="popup-new-items">
+									<li class="popup-new-item">Сливочные</li>
+									<li class="popup-new-item">Щербеты</li>
+									<li class="popup-new-item">Фруктовый лед</li>
+									<li class="popup-new-item">Мелорин</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
 					<li class="main-navigation-item"><a class="navigation-link" href="#">Доставка и оплата</a></li>
 					<li class="main-navigation-item"><a class="navigation-link" href="#">О компании</a></li>
 				</ul>
 				<ul class="user-navigation-items">
-					<li class="user-navigation-item">Поиск <img class="icon-search" src="#" alt=""></li>
-					<li class="user-navigation-item">Вход</li>
-					<li class="user-navigation-item">Корзина: Пусто</li>
+					<li class="user-navigation-item">
+						Поиск <img class="icon-search" src="#" alt="">
+						<section class="user-search-popup">
+							<input type="text" placeholder="Что ищем?">
+						</section>
+					</li>
+					<li class="user-navigation-item">
+						<a class="user-navigation-item-link" href="#">Вход</a>
+						<form class="user-form" action="#" method="post">
+							<input type="text" placeholder="Электронная почта">
+							<input type="password" placeholder="Пароль">
+							<section class="user-form-footer">
+								<input type="button" value="Войти">
+								<ul class="user-form-items">
+									<li class="user-form-item"><a class="user-form-item-link" href="#">Забыли пароль?</a></li>
+									<li class="user-form-item"><a class="user-form-item-link" href="#">Регистрация</a></li>
+								</ul>
+							</section>
+						</form>
+					</li>
+					<li class="user-navigation-item">
+						<p>Корзина: Пусто</p>
+						<form class="user-basket-form" action="#" method="get">
+							<ul class="user-basket-items">
+								<li class="user-basket-item">
+									<ul class="waren-data-items">
+										<li class="waren-data-item">
+											<img class="waren-data-img" src="#" alt="Фото товара">
+										</li>
+										<li class="waren-data-item">
+											<p>Пломбир с апельсиновым джемом</p>
+											<input type="text" name="waren-name" disabled>
+										</li>
+										<li class="waren-data-item">
+											<p>1,5 х 200 руб.</p>
+											<input type="text" name="waren-amount" disabled>
+										</li>
+										<li class="waren-data-item">
+											<p>300 руб</p>
+											<input type="text" name="waren-count" disabled>
+										</li>
+									</ul>
+								</li>
+								<li class="user-basket-item">
+									<ul class="waren-data-items">
+										<li class="waren-data-item">
+											<img class="waren-data-img" src="#" alt="Фото товара">
+										</li>
+										<li class="waren-data-item">
+											<p>Клубничный пломбир с присыпкой из белого шоколада</p>
+											<input type="text" name="waren-name" disabled>
+										</li>
+										<li class="waren-data-item">
+											<p>1,5 х 300 руб.</p>
+											<input type="text" name="waren-amount" disabled>
+										</li>
+										<li class="waren-data-item">
+											<p>450</p>
+											<input type="text" name="waren-count" disabled>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<p class="user-basket-form-total">Итого: <span class="total-variable">750</span> руб.</p>
+							<input type="text" name="waren-count-result" disabled>
+							<input type="button" value="Оформить заказ">
+						</form>
+					</li>
 				</ul>
 			</nav>
 			<section class="header-contact-information">
