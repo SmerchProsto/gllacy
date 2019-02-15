@@ -3,26 +3,24 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Магазин Глейси</title>
+	<link rel="stylesheet" href="css/min-normalize.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<input class="header-slide-toggle" id="header-slide-toggle-1" type="radio" name="slide-control" value="header-slide-toggle-1">
 	<input class="header-slide-toggle" id="header-slide-toggle-2" type="radio" name="slide-control" value="header-slide-toggle-2">
 	<input class="header-slide-toggle" id="header-slide-toggle-3" type="radio" name="slide-control" value="header-slide-toggle-3">
 	<div class="wrapper">
-		<section class="slide-controls">
-			<label for="header-slide-toggle-1"></label>
-			<label for="header-slide-toggle-2"></label>
-			<label for="header-slide-toggle-3"></label>
-		</section>
 		<header class="main-header">
 			<nav class="main-navigation">
 				<ul class="main-navigation-items">
 					<li class="main-navigation-item">
-						<img class="logo-header" src="#" alt="Лого Глейси">
+						<img class="logo-header" src="#" width="154" height="64" alt="Лого Глейси">
 					</li>
 					<li class="main-navigation-item">
 						<a class="navigation-link" href="#">Каталог</a>
-						<ul class="navigation-popup-items">
+						<ul class="navigation-popup-items visibility-hidden">
 							<li class="navigation-popup-item">
 								<p>Напитки</p>
 								<ul class="popup-new-items">
@@ -40,13 +38,13 @@
 				<ul class="user-navigation-items">
 					<li class="user-navigation-item">
 						Поиск <img class="icon-search" src="#" alt="">
-						<section class="user-search-popup">
+						<section class="user-search-popup visibility-hidden">
 							<input type="text" placeholder="Что ищем?">
 						</section>
 					</li>
 					<li class="user-navigation-item">
 						<a class="user-navigation-item-link" href="#">Вход</a>
-						<form class="user-form" action="#" method="post">
+						<form class="user-form visibility-hidden" action="#" method="post">
 							<input type="text" placeholder="Электронная почта">
 							<input type="password" placeholder="Пароль">
 							<section class="user-form-footer">
@@ -60,7 +58,7 @@
 					</li>
 					<li class="user-navigation-item">
 						<p>Корзина: Пусто</p>
-						<form class="user-basket-form" action="#" method="get">
+						<form class="user-basket-form visibility-hidden" action="#" method="get">
 							<ul class="user-basket-items">
 								<li class="user-basket-item">
 									<ul class="waren-data-items">
@@ -109,8 +107,8 @@
 				</ul>
 			</nav>
 			<section class="header-contact-information">
-				<p>С 10 до 20, ежедневно</p>
-				<p>8 812 450-25-25</p>
+				<p class="header-contact-information-paragraph">С 10 до 20, ежедневно</p>
+				<p class="header-contact-information-paragraph">8 812 450-25-25</p>
 			</section>
 			<section class="header-slides">
 				<section class="header-slide">
@@ -125,6 +123,11 @@
 					<h2 class="header-slide-title">Пломбир с помадкой и клубничный щербет</h2>
 					<a class="header-slide-button" href="#">Давайте оба!</a>
 				</section>
+			</section>
+			<section class="slide-controls">
+				<label for="header-slide-toggle-1"></label>
+				<label for="header-slide-toggle-2"></label>
+				<label for="header-slide-toggle-3"></label>
 			</section>
 		</header>
 		<main>
@@ -158,7 +161,7 @@
 							апельсиновым джемом и цитрусовой стружкой
 						</a>
 					</h2>
-					<p class="popular-product-price">310 &#8381;/кг</p>
+					<p class="popular-product-price">310 р/кг</p>
 				</section>
 				<section class="popular-product">
 					<img class="popular-product-img" src="#" alt="">
@@ -168,7 +171,7 @@
 							Сливочно-кофейное с кусочками шоколада
 						</a>
 					</h2>
-					<p class="popular-product-price">380 &#8381;/кг</p>
+					<p class="popular-product-price">380 р/кг</p>
 				</section>
 				<section class="popular-product">
 					<img class="popular-product-img" src="#" alt="">
@@ -178,7 +181,7 @@
 							Сливочно-клубничное с присыпкой из белого шоколада
 						</a>
 					</h2>
-					<p class="popular-product-price">355 &#8381;/кг</p>
+					<p class="popular-product-price">355 р/кг</p>
 				</section>
 				<section class="popular-product">
 					<img class="popular-product-img" src="#" alt="">
@@ -188,7 +191,7 @@
 							Сливочное крем-брюле с карамельной подливкой
 						</a>
 					</h2>
-					<p class="popular-product-price">415 &#8381;/кг</p>
+					<p class="popular-product-price">415 р/кг</p>
 				</section>
 			</section>
 			<section class="about-us">
