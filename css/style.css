@@ -2,6 +2,10 @@
 	display: none;
 }
 
+.main-header {
+	margin-bottom: 40px;
+}
+
 			/* MAIN-NAVIGATION */
 
 .main-navigation {
@@ -107,6 +111,156 @@
 	
 }
 
+		/* MAIN */
+
+main {
+	margin-bottom: 35px;
+}
+
+	/* BANNERS */
+
+.banners {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-bottom: 40px;
+}
+
+.banner {
+	width: 430px;
+	min-height: 233px;
+}
+
+		/* POPULAR-PRODUCT */
+
+.popular-products {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+.popular-product-img {
+	display: block;
+	width: 200px;
+	height: 200px;
+}
+
+.popular-product {
+	width: 200px;
+	min-height: 283px;
+}
+
+.popular-product-title {
+	font-size: 16px;
+	line-height: 22px;
+}
+
+		/* ABOUT-US */
+
+.about-us {
+	margin-bottom: 40px;
+}
+
+.about-us-title {
+	font-size: 24px;
+	line-height: 30px;
+}
+
+.about-us-paragraphs {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.about-us-paragraph {
+	width: 399px;
+	min-height: 130px;
+	padding-left: 57px;
+	text-align: left;
+}
+
+		/* CONTENT-BLOCKS */
+
+.content-blocks {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-bottom: 40px;
+}
+
+.blog-news,
+.mailing-block {
+	width: 420px;
+	min-height: 220px;
+}
+
+
+		/* MAP-BLOCK */
+
+.map-block {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
+		/* MAIN-FOOTER */
+
+.main-footer {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+		/* SOCIAL-BUTTONS */
+
+.social-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 200px;
+	min-height: 50px;	
+}
+
+.social-button {
+	display: block;
+	width: 35px;
+	height: 40px;
+}
+
+		/* FOOTER-NAVIGATION-ITEMS */
+
+.footer-navigation-items {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 330px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.footer-navigation-item {
+	margin: 0;
+	padding: 0;
+}
+
+.developer-logo {
+	display: block;
+	width: 112px;
+	height: 40px;
+}
+
+.about-developer {
+	width: 200px;
+}
+
 /* --- */
 		/* DEFAULT SETTINGS */
 
@@ -141,6 +295,10 @@ body {
 	overflow:hidden;
 	clip:rect(0 0 0 0);
 	clip-path:inset(50%);
+}
+
+.visually-hidden {
+	display: none;
 }
 
 /* label[for*="toggle-1"],
