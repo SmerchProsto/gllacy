@@ -124,8 +124,8 @@
   font-size: 31px;
   line-height: 41px;
   vertical-align: top;
-  color: #ffffff;
   text-decoration: none;
+  color: #ffffff;
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
   background: #f26843;
   background:    -moz-linear-gradient(top, #f26843 0%, #e74a35 100%);
@@ -135,14 +135,16 @@
   box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
 }
 
-.header-slide-button:hover {
+.header-slide-button:hover,
+.banner-button:hover {
 	background: -moz-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
   background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
   background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
   box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
 }
 
-.header-slide-buttom:active {
+.header-slide-buttom:active,
+.banner-button:active {
 	background: -moz-linear-gradient(top, #d84732 0%, #e1613e 100%);
   background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
   background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
@@ -192,24 +194,29 @@ main {
 }
 
 .banner {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: space-between;
 	width: 420px;
 	min-height: 230px;
 	padding-right: 20px;
-	padding-bottom: 10px;
+	padding-bottom: 23px;
 	padding-left: 20px;
 	border-radius: 20px;
 }
 
 .banner-raspberry {
-	background: url("../img/raspberry-background.jpg") no-repeat;
+	background: url("../img/raspberry-background.jpg");
 }
 
 .banner-chocolate {
-	background: url("../img/chocolate-background.jpg") no-repeat;
+	background: url("../img/chocolate-background.jpg");
 }
 
 .banner-title {
 	margin-top: 20px;
+	margin-bottom: 0;
 	font-size: 35px;
 	line-height: 41px;
 }
@@ -221,6 +228,7 @@ main {
 .banner-button {
 	display: inline-block;
 	padding: 9px 20px;
+	font-weight: bold;
 	vertical-align: top;
 	text-decoration: none;
 	color: #ffffff;
@@ -228,7 +236,10 @@ main {
   background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
   background:         linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
   border-radius: 100px;
+  align-self: flex-end;
 }
+
+/* banner-button :hover, :active with header-slide-button */
 
 		/* POPULAR-PRODUCT */
 
@@ -236,6 +247,42 @@ main {
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
+	justify-content: space-between;
+	margin-bottom: 40px;
+}
+
+.popular-product {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	position: relative;
+	width: 200px;
+	min-height: 290px;
+	padding: 10px 10px 16px 10px;
+	text-align: center;
+	transition: all 0.6s ease-in-out;
+}
+
+.popular-product:hover {
+	width: 220px;
+	min-height: 370px;
+}
+
+.popular-product::before {
+	content: "";
+	display: none;
+	transition: all 0.6s ease-in-out;
+}
+
+.popular-product:hover::before {
+	position: absolute;
+	display: block;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: #ffffff;
+	opacity: 0.2;
 }
 
 .popular-product-img {
@@ -244,15 +291,60 @@ main {
 	height: 200px;
 }
 
-.popular-product {
-	width: 200px;
-	min-height: 283px;
+.popular-product-icon {
+	width: 61px;
+	height: 61px;
+	top: 0;
+	left: 0;
+	position: absolute;
 }
 
 .popular-product-title {
 	font-size: 16px;
 	line-height: 22px;
 }
+
+.popular-product-price {
+	position: absolute;
+	top: 120px;
+	left: 0;
+	font-weight: bold;
+	font-size: 37px;
+	line-height: auto;
+}
+
+.popular-product-title {
+	font-weight: normal;
+}
+
+.popular-product-link {
+	color: #ffffff;
+}
+
+.popular-product-button {
+	display: none;
+	width: 195px;
+	min-height: 50px;
+	margin-top: auto;
+}
+
+.popular-product:hover .popular-product-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+  text-decoration: none;
+  color: #ffffff;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+  background: #f26843;
+  background:    -moz-linear-gradient(top, #f26843 0%, #e74a35 100%);
+  background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
+  background:         linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+  border-radius: 100px;
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+}
+
+/* popular-product-button with header-slide-button */
 
 		/* ABOUT-US */
 
