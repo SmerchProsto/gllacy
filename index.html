@@ -36,14 +36,15 @@
 					<li class="main-navigation-item"><a class="navigation-link" href="#">О компании</a></li>
 				</ul>
 				<ul class="user-navigation-items">
-					<li class="user-navigation-item">
-						Поиск <img class="icon-search" src="#" alt="">
+					<li class="user-navigation-item user-navigation-item-search">
+						O
+						<img class="icon-search" src="#" alt="">
 						<section class="user-search-popup visibility-hidden">
 							<input type="text" placeholder="Что ищем?">
 						</section>
 					</li>
 					<li class="user-navigation-item">
-						<a class="user-navigation-item-link" href="#">Вход</a>
+						<a class="user-navigation-item-link user-navigation-link-login" href="#">Вход</a>
 						<form class="user-form visibility-hidden" action="#" method="post">
 							<input type="text" placeholder="Электронная почта">
 							<input type="password" placeholder="Пароль">
@@ -57,7 +58,7 @@
 						</form>
 					</li>
 					<li class="user-navigation-item">
-						<p>Корзина: Пусто</p>
+						<a class="user-navigation-item-link user-navigation-link-basket" href="#">Корзина</a>
 						<form class="user-basket-form visibility-hidden" action="#" method="get">
 							<ul class="user-basket-items">
 								<li class="user-basket-item">
@@ -115,11 +116,11 @@
 					<h2 class="header-slide-title">Крем-брюле и пломбир с малиновым джемом</h2>
 					<a class="header-slide-button" href="#">Давайте оба!</a>
 				</section>
-				<section class="header-slide visibility-hidden">
+				<section class="header-slide header-slide-2">
 					<h2 class="header-slide-title">Шоколадный пломбир и лимонный сорбет</h2>
 					<a class="header-slide-button" href="#">Давайте оба!</a>
 				</section>
-				<section class="header-slide visibility-hidden">
+				<section class="header-slide header-slide-3">
 					<h2 class="header-slide-title">Пломбир с помадкой и клубничный щербет</h2>
 					<a class="header-slide-button" href="#">Давайте оба!</a>
 				</section>
@@ -228,24 +229,27 @@
 					</h2>
 				</section>
 				<section class="mailing-block">
-					<p class="mailing-block-paragraph">
-						Подпишитесь на нашу сладкую рассылку
-						и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) 
-					</p>
-					<form class="mailing-form" action="#" method="post">
-						<input type="email" placeholder="Электронная почта">
-						<input class="mailing-form-button" type="button" value="Отправить">
-					</form>
+					<div class="mailing-block-wrap">
+						<p class="mailing-block-paragraph">
+							Подпишитесь на нашу сладкую рассылку
+							и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) 
+						</p>
+						<form class="mailing-form" action="#" method="post">
+							<input class="mailing-input" type="email" placeholder="Электронная почта">
+							<input class="mailing-form-button" type="button" value="Отправить">
+						</form>
+					</div>
 				</section>
 			</section>
 			<section class="map-block">
+				<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.2966589677158!2d30.322580688453094!3d59.938890192111764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1552092462199" width="900" height="430" frameborder="0" style="border:0" allowfullscreen></iframe>
 				<section class="map-information">
 					<p class="map-information-paragraph">
 						Адрес главного офиса и офлайн магазина:<br>
-						<b>Ул. Большая конюшенная</b><br>
-						<b>19/8, Санкт-Петербург</b><br><br>
+						<b class="big-text">Ул. Большая конюшенная</b><br>
+						<b class="big-text">19/8, Санкт-Петербург</b><br><br>
 						Для заказов по телефону:<br>
-						<b>8 812 450-25-25</b><br>
+						<b class="big-text">8 812 450-25-25</b><br>
 						(с 10 до 20 ежедневно)
 					</p>
 					<a class="map-information-button" href="#">Форма обратной связи</a>
@@ -254,10 +258,10 @@
 		</main>
 		<footer class="main-footer">
 			<section class="social-buttons">
-				<a href="#" class="social-button">T<span class="visually-hidden">Твиттер</span></a>
-				<a href="#" class="social-button">I<span class="visually-hidden">Инстаграмм</span></a>
-				<a href="#" class="social-button">F<span class="visually-hidden">Фейсбук</span></a>
-				<a href="#" class="social-button">VK<span class="visually-hidden">Вконтакте</span></a>
+				<a href="#" class="social-button"><span class="visually-hidden">Твиттер</span></a>
+				<a href="#" class="social-button"><span class="visually-hidden">Инстаграмм</span></a>
+				<a href="#" class="social-button"><span class="visually-hidden">Фейсбук</span></a>
+				<a href="#" class="social-button"><span class="visually-hidden">Вконтакте</span></a>
 			</section>
 			<nav class="footer-navigation">
 				<ul class="footer-navigation-items">
@@ -268,7 +272,9 @@
 				</ul>
 			</nav>
 			<section class="about-developer">
-				<img class="developer-logo" src="#" alt="htmlacademy">
+				<a class="about-developer-link" href="https://htmlacademy.ru">
+					<img class="developer-logo" src="img/htmlacademy-logo.png" alt="htmlacademy">
+				</a>
 				<p class="about-developer-paragraph">Дизайн сайта выполнен в HTML Academy © 2019</p>
 			</section>
 		</footer>
