@@ -6,6 +6,10 @@
 
 	/* MAIN-HEADER */
 
+.main-header {
+	padding-top: 10px;
+}
+
 .header-slide-toggle {
 	display: none;
 }
@@ -33,7 +37,7 @@
 	flex-wrap: wrap;
 	flex-direction: row;
 	justify-content: space-between;
-	width: 530px;
+	width: 550px;
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -45,17 +49,42 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	min-width: 100px;
+	min-width: 64px;
 	margin: 0;
 	padding: 0;
 }
 
 .navigation-link {
-	text-decoration: none;
+	position: relative;
+	z-index: 2;
+	display: inline-block;
 	color: #ffffff;
-	text-decoration-style: 
-	text-decoration-color: #cccccc;
+	text-decoration: none;
 	border-bottom: 1px solid #cccccc;
+}
+
+.navigation-link::before {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+	content: "";
+	border-radius: 100px;
+}
+
+.navigation-link:hover {
+	color: #000000;
+	border: none;
+}
+
+.navigation-link:hover::before {
+	top: -8px;
+	right: -15px;
+	bottom: -8px;
+	left: -15px;
+	background-color: #ffffff;
 }
 
 .logo-header {
@@ -472,6 +501,12 @@ main {
 	color: #ffffff;
 }
 
+.popular-product-link:hover,
+.footer-navigation-item-link:hover {
+	color: #ffbc9e;
+	text-decoration-color: #ffbc9e;
+}
+
 .popular-product-button {
 	display: none;
 	width: 195px;
@@ -583,6 +618,11 @@ main {
 	color: #353535;
 }
 
+.blog-news-link:hover {
+	color: #ffbc9e;
+	text-decoration-color: #ffbc9e;
+}
+
 .blog-news-link::before {
 	content: "";
 	position: absolute;
@@ -669,9 +709,11 @@ main {
 	flex-wrap: wrap;
 	flex-direction: row;
 	justify-content: flex-end;
-	align-items: center;
+	width: 900px;
 	height: 430px;
+	margin: 0 auto;
 	margin-bottom: 35px;
+	padding: 60px 20px;	
 }
 
 .map {
@@ -681,6 +723,8 @@ main {
 	bottom: 0;
 	left: 0;
 	z-index: -1;
+	width: 100%;
+	height: 100%;
 }
 
 .map-information *:first-child {
@@ -819,7 +863,7 @@ body {
 }
 
 .main-header,
-main,
+.container,
 .main-footer {
 	width: 900px;
 	margin: 0 auto;
@@ -873,15 +917,3 @@ main,
 .wrapper::after {
 	background-image: url("slide-3.png");
 }
-
-/* label[for*="toggle-1"],
-label[for*="toggle-2"],
-label[for*="toggle-3"] {
-	display: block;
-	width: 18px;
-	height: 18px;
-}
-
-#header-slide-toggle-1:checked ~ .wrapper label[for*="toggle-1"] {
-	
-} */
