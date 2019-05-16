@@ -16,10 +16,12 @@
 			<nav class="main-navigation">
 				<ul class="main-navigation-items">
 					<li class="main-navigation-item">
-						<img class="logo-header" src="img/logo.png" width="154" height="64" alt="Лого Глейси">
+						<a class="logo-header-link">
+							<img class="logo-header-img" src="img/logo.png" width="154" height="64" alt="Лого Глейси">
+						</a>
 					</li>
 					<li class="main-navigation-item">
-						<a class="navigation-link" href="#">Каталог</a>
+						<a class="navigation-link" href="gllacy-catalog.html">Каталог</a>
 						<ul class="navigation-popup-items visibility-hidden">
 							<li class="navigation-popup-item">
 								<p>Напитки</p>
@@ -37,8 +39,9 @@
 				</ul>
 				<ul class="user-navigation-items">
 					<li class="user-navigation-item user-navigation-item-search">
-						O
-						<img class="icon-search" src="#" alt="">
+						<span class="visibility-hidden">Поиск</span>
+						<img class="user-navigation-search-icon" src="img/search-icon.png" alt="">
+						<img class="user-navigation-search-icon search-on-icon" src="img/search-on-icon.png" alt="">
 						<section class="user-search-popup visibility-hidden">
 							<input type="text" placeholder="Что ищем?">
 						</section>
@@ -108,8 +111,8 @@
 				</ul>
 			</nav>
 			<section class="header-contact-information">
-				<p class="header-contact-information-paragraph paragraph-time">С 10 до 20, ежедневно</p>
-				<p class="header-contact-information-paragraph paragraph-number">8 812 450-25-25</p>
+				<p class="contact-information-paragraph paragraph-time">С 10 до 20, ежедневно</p>
+				<p class="contact-information-paragraph paragraph-number">8 812 450-25-25</p>
 			</section>
 			<section class="header-slides">
 				<section class="header-slide header-slide-1">
@@ -260,19 +263,33 @@
 		</main>
 		<footer class="main-footer">
 			<section class="social-buttons">
-				<a href="#" class="social-button"><span class="visually-hidden">Твиттер</span></a>
-				<a href="#" class="social-button"><span class="visually-hidden">Инстаграмм</span></a>
-				<a href="#" class="social-button"><span class="visually-hidden">Фейсбук</span></a>
-				<a href="#" class="social-button"><span class="visually-hidden">Вконтакте</span></a>
+				<a href="#" class="social-button">
+					<span class="visually-hidden">Твиттер</span>
+					<img class="social-button-img" src="img/twitter.png" alt="">
+				</a>
+				<a href="#" class="social-button">
+					<span class="visually-hidden">Инстаграмм</span>
+					<img class="social-button-img" src="img/inst-icon.png" alt="">
+				</a>
+				<a href="#" class="social-button">
+					<span class="visually-hidden">Фейсбук</span>
+					<img class="social-button-img" src="img/facebook-icon.png" alt="">
+				</a>
+				<a href="#" class="social-button">
+					<span class="visually-hidden">Вконтакте</span>
+					<img class="social-button-img" src="img/vk-icon.png" alt="">
+				</a>
 			</section>
-			<nav class="footer-navigation">
-				<ul class="footer-navigation-items">
-					<li class="footer-navigation-item"><a class="footer-navigation-item-link" href="#">Для поставщиков</a></li>
-					<li class="footer-navigation-item"><a class="footer-navigation-item-link" href="#">Наши документы</a></li>
+			<ul class="footer-navigation-items">
+				<ul class="footer-navigation-first-group">
+					<li class="footer-navigation-item footer-navigation-item-suppliers"><a class="footer-navigation-item-link" href="#">Для поставщиков</a></li>
 					<li class="footer-navigation-item"><a class="footer-navigation-item-link" href="#">О производстве</a></li>
+				</ul>
+				<ul class="footer-navigation-second-group">
+					<li class="footer-navigation-item"><a class="footer-navigation-item-link" href="#">Наши документы</a></li>
 					<li class="footer-navigation-item"><a class="footer-navigation-item-link" href="#">Экологические стандарты</a></li>
 				</ul>
-			</nav>
+			</ul>
 			<section class="about-developer">
 				<a class="about-developer-link" href="https://htmlacademy.ru">
 					<img class="developer-logo" src="img/htmlacademy-logo.png" alt="htmlacademy">
