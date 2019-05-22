@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body class="gllacy-catalog">
-	<header class="main-header">
+	<header class="main-header gllacy-catalog-header">
 			<nav class="main-navigation">
 				<ul class="main-navigation-items">
 					<li class="main-navigation-item">
@@ -17,7 +17,7 @@
 						</a>
 					</li>
 					<li class="main-navigation-item">
-						<a class="navigation-link">Каталог</a>
+						<a class="navigation-link active-link">Каталог</a>
 						<ul class="navigation-popup-items visibility-hidden">
 							<li class="navigation-popup-item">
 								<p>Напитки</p>
@@ -56,8 +56,8 @@
 							</section>
 						</form>
 					</li>
-					<li class="user-navigation-item">
-						<a class="user-navigation-item-link user-navigation-link-basket" href="#">Корзина</a>
+					<li class="user-navigation-item active-basket">
+						<a class="user-navigation-item-link user-navigation-link-basket" href="#">2 товара</a>
 						<form class="user-basket-form visibility-hidden" action="#" method="get">
 							<ul class="user-basket-items">
 								<li class="user-basket-item">
@@ -108,9 +108,15 @@
 			</nav>
 			<section class="header-contact-information">
 				<ul class="contact-information-breadcrumbs">
-					<li class="contact-information-breadcrumb">Главная</li>
-					<li class="contact-information-breadcrumb">Каталог</li>
-					<li class="contact-information-breadcrumb">Сливочное</li>
+					<li class="contact-information-breadcrumb">
+						<a class="contact-information-breadcrumb-link" href="index.html">Главная</a>
+					</li>
+					<li class="contact-information-breadcrumb">
+						<a class="contact-information-breadcrumb-link" href="gllacy-catalog.html">Каталог</a>
+					</li>
+					<li class="contact-information-breadcrumb">
+						<a class="contact-information-breadcrumb-link active-link">Сливочное</a>
+					</li>
 				</ul>
 				<section class="contact-information-data">
 					<p class="contact-information-paragraph paragraph-time">С 10 до 20, ежедневно</p>
@@ -118,76 +124,89 @@
 				</section>
 			</section>
 		</header>
-		<main class="container">
+		<main class="container gllacy-catalog-container">
 			<h1 class="visually-hidden">Каталог мороженого</h1>
 			<h2 class="gllacy-catalog-title">Сливочное мороженое</h2>
 			<form class="catalog-form-options" action="#" method="get">
 				<ul class="option-items">
-					<li class="option-item">
+					<li class="option-item option-item-sorting">
 						<h3 class="option-item-title">Сортировка</h3>
-						<select name="icecream-sorting">
-							<option value="sorting-popular" selected>по популярности</option>
-							<option value="sorting-popular">по цене</option>
-						</select>
+						<div class="select-sorting-wrapper">
+							<select name="icecream-sorting">
+								<option class="sorting-selection" value="sorting-popular" selected>по популярности</option>
+								<option class="sorting-selection" value="sorting-price">по цене</option>
+							</select>
+						</div>
 					</li>
-					<li class="option-item">
+					<li class="option-item option-item-price">
 						<h3 class="option-item-title">Цена: 100 руб. - 500 руб.</h3>
 						<div class="option-item-slide">
 							<div class="option-slide-scale">
-								<div class="option-slide-range"></div>
-								<div class="option-slide-range"></div>
+								<div class="option-slide-range first-range"></div>
+								<div class="option-slide-range second-range"></div>
 								<div class="option-slide-scale-filled"></div>
 							</div>
 						</div>
 					</li>
-					<li class="option-item">
+					<li class="option-item option-item-rich-fat-content">
 						<h3 class="option-item-title">Жирность:</h3>
+						<ul class="service-items service-items-fat-content">
+							<li class="service-item">
+								<input class="visually-hidden" id="zero-percent" type="radio" name="percent-fat-content" value="0%">
+								<label for="zero-percent">0%</label>
+								<img class="radio-point" src="img/radio-on.png" alt="">
+							</li>
+							<li class="service-item">
+								<input class="visually-hidden" id="less-than-ten-percent" type="radio" name="percent-fat-content" value="less-than-10%" checked>
+								<label for="less-than-ten-percent">до 10%</label>
+								<img class="radio-point" src="img/radio-on.png" alt="">
+							</li>
+							<li class="service-item">
+								<input class="visually-hidden" id="less-than-thrity-percent" type="radio" name="percent-fat-content" value="less-than-30%">
+								<label for="less-than-thrity-percent">до 30%</label>
+								<img class="radio-point" src="img/radio-on.png" alt="">
+							</li>
+							<li class="service-item">
+								<input class="visually-hidden" id="more-than-thrity-percent" type="radio" name="percent-fat-content" value="more-than-30%">
+								<label for="more-than-thrity-percent">выше 30%</label>
+								<img class="radio-point" src="img/radio-on.png" alt="">
+							</li>
+						</ul>
+					</li>
+					<li class="option-item option-item-filler">
+						<h3 class="option-item-title">Наполнители:</h3>
 						<ul class="service-items">
 							<li class="service-item">
-								<input id="zero-percent" type="radio" name="percent-fat-content" value="0%">
-								<label for="zero-percent">0%</label>
+								<input class="visually-hidden" id="chocolate-filler" type="checkbox" name="fillers" value="chocolate" checked>
+								<label for="chocolate-filler">шоколадные</label>
+								<img class="checkbox-mark" src="img/checkbox-on.png" alt="">
 							</li>
 							<li class="service-item">
-								<input id="less-than-ten-percent" type="radio" name="percent-fat-content" value="less-than-10%">
-								<label for="less-than-ten-percent">до 10%</label>
+								<input class="visually-hidden" id="sugar-powders-filler" type="checkbox" name="fillers" value="sugar-powders" checked>
+								<label for="sugar-powders-filler">сахарные присыпки</label>
+								<img class="checkbox-mark" src="img/checkbox-on.png" alt="">
 							</li>
 							<li class="service-item">
-								<input id="less-than-thrity-percent" type="radio" name="percent-fat-content" value="less-than-30%">
-								<label for="less-than-thrity-percent">до 30%</label>
+								<input class="visually-hidden" id="fruits-filler" type="checkbox" name="fillers" value="fruits">
+								<label for="fruits-filler">фруктовые</label>
+								<img class="checkbox-mark" src="img/checkbox-on.png" alt="">
 							</li>
 							<li class="service-item">
-								<input id="more-than-thrity-percent" type="radio" name="percent-fat-content" value="more-than-30%">
-								<label for="more-than-thrity-percent">выше 30%</label>
+								<input class="visually-hidden" id="syrups-filler" type="checkbox" name="fillers" value="syrups">
+								<label for="syrups-filler">сиропы</label>
+								<img class="checkbox-mark" src="img/checkbox-on.png" alt="">
+							</li>
+							<li class="service-item">
+								<input class="visually-hidden" id="jams-filler" type="checkbox" name="fillers" value="jams">
+								<label for="jams-filler">джемы</label>
+								<img class="checkbox-mark" src="img/checkbox-on.png" alt="">
 							</li>
 						</ul>
 					</li>
-					<li class="option-item">
-						<h3 class="option-item-title">Наполнители:</h3>
-						<ul class="service-item">
-							<li class="service-item">
-								<input id="chocolate-filler" type="checkbox" name="fillers" value="chocolate" checked>
-								<label for="chocolate-filler">Шоколадные</label>
-							</li>
-							<li class="service-item">
-								<input id="sugar-powders-filler" type="checkbox" name="fillers" value="sugar-powders" checked>
-								<label for="sugar-powders-filler">Сахарные присыпки</label>
-							</li>
-							<li class="service-item">
-								<input id="fruits-filler" type="checkbox" name="fillers" value="fruits">
-								<label for="fruits-filler">фруктовые</label>
-							</li>
-							<li class="service-item">
-								<input id="syrups-filler" type="checkbox" name="fillers" value="syrups">
-								<label for="syrups-filler">сиропы</label>
-							</li>
-							<li class="service-item">
-								<input id="jams-filler" type="checkbox" name="fillers" value="jams">
-								<label for="jams-filler">джемы</label>
-							</li>
-						</ul>
+					<li class="option-item option-item-form-button-block">
+						<input class="form-button" type="button" value="Применить">
 					</li>
 				</ul>
-				<input type="button" value="Применить">
 			</form>
 			<section class="catalog-products">
 					<section class="catalog-product">
@@ -313,11 +332,29 @@
 					</section>
 				</section>
 				<ul class="products-breadcrumbs">
-					<li class="products-breadcrumb">1</li>
-					<li class="products-breadcrumb">2</li>
-					<li class="products-breadcrumb">3</li>
-					<li class="products-breadcrumb">4</li>
-					<li class="products-breadcrumb">5</li>
+					<li class="products-breadcrumb products-breadcrumb-toggle">
+						<a class="products-breadcrumb-toggle-prev toggle-prev-disabled"><</a>
+						<span class="visually-hidden">назад</span>
+					</li>
+					<li class="products-breadcrumb active-products-breadcrumb">
+						<a class="products-breadcrumb-link active-products-breadcrumb-link">1</a>
+					</li>
+					<li class="products-breadcrumb">
+						<a class="products-breadcrumb-link" href="#">2</a>
+					</li>
+					<li class="products-breadcrumb">
+						<a class="products-breadcrumb-link" href="#">3</a>
+					</li>
+					<li class="products-breadcrumb">
+						<a class="products-breadcrumb-link" href="#">4</a>
+					</li>
+					<li class="products-breadcrumb">
+						<a class="products-breadcrumb-link" href="#">5</a>
+					</li>
+					<li class="products-breadcrumb-toggle">
+						<a class="products-breadcrumb products-breadcrumb-toggle-next" href="#">></a>
+						<span class="visually-hidden">вперед</span>
+					</li>
 				</ul>
 		</main>
 		<footer class="main-footer">
