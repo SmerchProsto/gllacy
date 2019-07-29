@@ -38,21 +38,23 @@
 					<li class="main-navigation-item"><a class="navigation-link" href="#">О компании</a></li>
 				</ul>
 				<ul class="user-navigation-items">
-					<li class="user-navigation-item user-navigation-item-search open-popup-element">
+					<li class="user-navigation-item user-navigation-item-search">
 						<span class="visibility-hidden">Поиск</span>
-						<img class="user-navigation-search-icon" src="img/search-icon.png" alt="">
-						<img class="user-navigation-search-icon search-on-icon" src="img/search-on-icon.png" alt="">
-						<section class="user-search-popup visibility-hidden">
-							<input type="text" placeholder="Что ищем?">
+						<a class="user-navigation-item-link link-search" href="#">
+							<img class="user-navigation-search-icon" src="img/search-icon.png" alt="">
+							<img class="user-navigation-search-icon search-on-icon" src="img/search-on-icon.png" alt="">
+						</a>
+						<section class="user-search-popup">
+							<input class="search-popup-input popup-input" type="text" name="search" placeholder="Что ищем?">
 						</section>
 					</li>
-					<li class="user-navigation-item open-popup-element">
+					<li class="user-navigation-item user-navigation-item-login">
 						<a class="user-navigation-item-link user-navigation-link-login" href="#">Вход</a>
-						<form class="user-form visibility-hidden" action="#" method="post">
-							<input type="text" placeholder="Электронная почта">
-							<input type="password" placeholder="Пароль">
+						<form class="user-form" action="#" method="post">
+							<input class="popup-input user-form-input user-form-email" type="text" name="email" placeholder="Электронная почта">
+							<input class="popup-input user-form-input user-form-password" type="password" name="password" placeholder="Пароль">
 							<section class="user-form-footer">
-								<input type="button" value="Войти">
+								<input class="form-footer-button" type="submit" value="Войти">
 								<ul class="user-form-items">
 									<li class="user-form-item"><a class="user-form-item-link" href="#">Забыли пароль?</a></li>
 									<li class="user-form-item"><a class="user-form-item-link" href="#">Регистрация</a></li>
