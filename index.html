@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html id="html" lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<title>Магазин Глейси</title>
@@ -39,7 +39,7 @@
 				</ul>
 				<ul class="user-navigation-items">
 					<li class="user-navigation-item user-navigation-item-search">
-						<span class="visibility-hidden">Поиск</span>
+						<span class="visually-hidden">Поиск</span>
 						<a class="user-navigation-item-link link-search" href="#">
 							<img class="user-navigation-search-icon" src="img/search-icon.png" alt="">
 							<img class="user-navigation-search-icon search-on-icon" src="img/search-on-icon.png" alt="">
@@ -259,7 +259,7 @@
 						<b class="big-text">8 812 450-25-25</b><br>
 						(с 10 до 20 ежедневно)
 					</p>
-					<a class="map-information-button" href="#">Форма обратной связи</a>
+					<a class="map-information-button" id="map-information-button" href="#">Форма обратной связи</a>
 				</section>
 			</section>
 		</main>
@@ -299,6 +299,18 @@
 				<p class="about-developer-paragraph">Дизайн сайта выполнен в HTML Academy © 2019</p>
 			</section>
 		</footer>
+		<form class="feedback-form feedback-form-off" id="feedback-form" action="#" method="post">
+			<h2 class="visually-hidden">Обратная связь</h2>
+			<h3 class="feedback-title">Мы обязательно вам ответим!</h3>
+			<input class="feedback-input-name feedback-input" type="text" name="user-name" placeholder="Как вас зовут?">
+			<input class="feedback-input-mail feedback-input" type="text" name="user-email" placeholder="Ваша почта для ответа?">
+			<textarea class="feedback-comment" name="user-comment" placeholder="Напишите что-нибудь..."></textarea>
+			<button class="feedback-close-button" id="feedback-close-button" type="button">
+				<span class="visually-hidden">Закрыть окно</span>
+			</button>
+			<input class="feedback-send-button" type="button" value="Отправить">
+		</form>
 	</div>
+	<script src="js/script.js"></script>
 </body>
 </html>
