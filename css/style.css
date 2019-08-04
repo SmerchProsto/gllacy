@@ -1733,6 +1733,7 @@ label[for$="-filler"]:hover ~ .checkbox-mark {
 	width: 430px;
 	height: 155px;
 	padding: 14px 15px;
+	border: 1px solid #cccccc;
 	border-radius: 5px;
 	resize: none;
 }
