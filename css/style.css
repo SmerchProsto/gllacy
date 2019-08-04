@@ -64,11 +64,12 @@
 	min-height: 30px;
 	padding: 5px 15px;
 	font-weight: bold;
-	text-decoration: none;
+	text-decoration-color: rgba(255, 255, 255, 0.4);
 	color: #ffffff;
 }
 
 .navigation-link:hover {
+	text-decoration: none;
 	color: #000000;
 	background-color: #ffffff;
 	border: 0;
@@ -1734,12 +1735,13 @@ label[for="feedback-comment"] {
 	position: absolute;
 	top: 8%;
 	left: 3%;
+	color: #999999;
 	transition: all 0.5s ease;
 	transform-origin: 0 0;
 }
 
 .feedback-comment:focus ~ label[for="feedback-comment"] {
-	top: -12%;
+	top: -10%;
 	left: 0;
 	color: #5b9ddf;
 	transform: scale(0.8);	
