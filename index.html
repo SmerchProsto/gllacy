@@ -45,14 +45,23 @@
 							<img class="user-navigation-search-icon search-on-icon" src="img/search-on-icon.png" alt="">
 						</a>
 						<section class="user-search-popup">
-							<input class="search-popup-input popup-input" type="text" name="search" placeholder="Что ищем?">
+							<div class="input-container">
+								<input class="search-popup-input popup-input gllacy-input" id="search-popup-input" type="text" name="search">
+								<label for="search-popup-input">Что ищем?</label>
+							</div>
 						</section>
 					</li>
 					<li class="user-navigation-item user-navigation-item-login">
 						<a class="user-navigation-item-link user-navigation-link-login" href="#">Вход</a>
 						<form class="user-form" action="#" method="post">
-							<input class="popup-input user-form-input user-form-email" type="text" name="email" placeholder="Электронная почта">
-							<input class="popup-input user-form-input user-form-password" type="password" name="password" placeholder="Пароль">
+							<div class="input-container">
+								<input class="popup-input user-form-input user-form-email gllacy-input" id="user-form-email" type="text" name="email">
+								<label for="user-form-email">Электронная почта</label>
+							</div>
+							<div class="input-container">
+								<input class="popup-input user-form-input user-form-password gllacy-input" id="user-form-password" type="password" name="password">
+								<label for="user-form-password">Пароль</label>
+							</div>
 							<section class="user-form-footer">
 								<input class="form-footer-button" type="submit" value="Войти">
 								<ul class="user-form-items">
@@ -241,7 +250,10 @@
 								и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) 
 							</p>
 							<form class="mailing-form" action="#" method="post">
-								<input class="mailing-input" type="email" placeholder="Электронная почта">
+								<div class="input-container">
+									<input class="mailing-input gllacy-input" id="mailing-input" type="email">
+									<label for="mailing-input">Электронная почта</label>
+								</div>
 								<input class="mailing-form-button" type="button" value="Отправить">
 							</form>
 						</div>
@@ -302,9 +314,18 @@
 		<form class="feedback-form feedback-form-off" id="feedback-form" action="#" method="post">
 			<h2 class="visually-hidden">Обратная связь</h2>
 			<h3 class="feedback-title">Мы обязательно вам ответим!</h3>
-			<input class="feedback-input-name feedback-input" type="text" name="user-name" placeholder="Как вас зовут?">
-			<input class="feedback-input-mail feedback-input" type="text" name="user-email" placeholder="Ваша почта для ответа?">
-			<textarea class="feedback-comment" name="user-comment" placeholder="Напишите что-нибудь..."></textarea>
+			<div class="input-container">
+				<input class="feedback-input-name feedback-input gllacy-input" id="feedback-input-name" type="text" name="user-name">
+				<label for="feedback-input-name">Как вас зовут?</label>
+			</div>
+			<div class="input-container">
+				<input class="feedback-input-mail feedback-input gllacy-input" id="feedback-input-mail" type="text" name="user-email">
+				<label for="feedback-input-mail">Ваша почта для ответа</label>
+			</div>
+			<div class="input-container">
+				<textarea class="feedback-comment" id="feedback-comment" name="user-comment"></textarea>
+				<label for="feedback-comment">Напишите что-нибудь</label>
+			</div>
 			<button class="feedback-close-button" id="feedback-close-button" type="button">
 				<span class="visually-hidden">Закрыть окно</span>
 			</button>
