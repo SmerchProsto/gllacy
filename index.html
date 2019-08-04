@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html id="html" lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<title>Магазин Глейси</title>
@@ -38,21 +38,23 @@
 					<li class="main-navigation-item"><a class="navigation-link" href="#">О компании</a></li>
 				</ul>
 				<ul class="user-navigation-items">
-					<li class="user-navigation-item user-navigation-item-search open-popup-element">
-						<span class="visibility-hidden">Поиск</span>
-						<img class="user-navigation-search-icon" src="img/search-icon.png" alt="">
-						<img class="user-navigation-search-icon search-on-icon" src="img/search-on-icon.png" alt="">
-						<section class="user-search-popup visibility-hidden">
-							<input type="text" placeholder="Что ищем?">
+					<li class="user-navigation-item user-navigation-item-search">
+						<span class="visually-hidden">Поиск</span>
+						<a class="user-navigation-item-link link-search" href="#">
+							<img class="user-navigation-search-icon" src="img/search-icon.png" alt="">
+							<img class="user-navigation-search-icon search-on-icon" src="img/search-on-icon.png" alt="">
+						</a>
+						<section class="user-search-popup">
+							<input class="search-popup-input popup-input" type="text" name="search" placeholder="Что ищем?">
 						</section>
 					</li>
-					<li class="user-navigation-item open-popup-element">
+					<li class="user-navigation-item user-navigation-item-login">
 						<a class="user-navigation-item-link user-navigation-link-login" href="#">Вход</a>
-						<form class="user-form visibility-hidden" action="#" method="post">
-							<input type="text" placeholder="Электронная почта">
-							<input type="password" placeholder="Пароль">
+						<form class="user-form" action="#" method="post">
+							<input class="popup-input user-form-input user-form-email" type="text" name="email" placeholder="Электронная почта">
+							<input class="popup-input user-form-input user-form-password" type="password" name="password" placeholder="Пароль">
 							<section class="user-form-footer">
-								<input type="button" value="Войти">
+								<input class="form-footer-button" type="submit" value="Войти">
 								<ul class="user-form-items">
 									<li class="user-form-item"><a class="user-form-item-link" href="#">Забыли пароль?</a></li>
 									<li class="user-form-item"><a class="user-form-item-link" href="#">Регистрация</a></li>
@@ -208,17 +210,17 @@
 						Магазин Глейси — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес
 					</h1>
 					<section class="about-us-paragraphs">
-						<p class="about-us-paragraph">
+						<p class="about-us-paragraph img-icecream">
 							Все наше мороженое изготавливается на собственном производстве, с использованием
 							современного оборудования и проверенных временем технологий.
 						</p>
-						<p class="about-us-paragraph">
+						<p class="about-us-paragraph img-cow">
 							Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
 						</p>
-						<p class="about-us-paragraph">
+						<p class="about-us-paragraph img-leaf">
 							Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
 						</p>
-						<p class="about-us-paragraph">
+						<p class="about-us-paragraph img-thermometer">
 							Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
 						</p>
 					</section>
@@ -257,7 +259,7 @@
 						<b class="big-text">8 812 450-25-25</b><br>
 						(с 10 до 20 ежедневно)
 					</p>
-					<a class="map-information-button" href="#">Форма обратной связи</a>
+					<a class="map-information-button" id="map-information-button" href="#">Форма обратной связи</a>
 				</section>
 			</section>
 		</main>
@@ -297,6 +299,18 @@
 				<p class="about-developer-paragraph">Дизайн сайта выполнен в HTML Academy © 2019</p>
 			</section>
 		</footer>
+		<form class="feedback-form feedback-form-off" id="feedback-form" action="#" method="post">
+			<h2 class="visually-hidden">Обратная связь</h2>
+			<h3 class="feedback-title">Мы обязательно вам ответим!</h3>
+			<input class="feedback-input-name feedback-input" type="text" name="user-name" placeholder="Как вас зовут?">
+			<input class="feedback-input-mail feedback-input" type="text" name="user-email" placeholder="Ваша почта для ответа?">
+			<textarea class="feedback-comment" name="user-comment" placeholder="Напишите что-нибудь..."></textarea>
+			<button class="feedback-close-button" id="feedback-close-button" type="button">
+				<span class="visually-hidden">Закрыть окно</span>
+			</button>
+			<input class="feedback-send-button" type="button" value="Отправить">
+		</form>
 	</div>
+	<script src="js/script.js"></script>
 </body>
 </html>
