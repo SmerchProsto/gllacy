@@ -228,11 +228,20 @@
 	white-space: nowrap;
 }
 
+.input-container {
+	position: relative;
+}
+
 .popup-input {
 	height: 45px;
 	padding: 15px;
 	border: 1px solid #cccccc;
 	border-radius: 5px;
+}
+
+.popup-input:focus {
+	border: 0;
+	outline: 1px solid #5b9ddf;
 }
 
 .search-popup-input {
@@ -1721,12 +1730,33 @@ label[for$="-filler"]:hover ~ .checkbox-mark {
 	color: #323232;
 }
 
+label[for="feedback-comment"] {
+	position: absolute;
+	top: 8%;
+	left: 3%;
+	transition: all 0.5s ease;
+	transform-origin: 0 0;
+}
+
+.feedback-comment:focus ~ label[for="feedback-comment"] {
+	top: -12%;
+	left: 0;
+	color: #5b9ddf;
+	transform: scale(0.8);	
+}
+
 .feedback-input {
 	width: 270px;
 	height: 45px;
 	padding: 14px 15px;
 	border: 1px solid #cccccc;
 	border-radius: 5px;
+}
+
+.feedback-input:focus,
+.feedback-comment:focus {
+	border: 0;
+	outline: 1px solid #5b9ddf;
 }
 
 .feedback-comment {
@@ -1845,6 +1875,38 @@ body {
 	line-height: 22px;
 	color: #ffffff;
 	background-color: #000000;
+}
+
+.gllacy-input {
+	height: 45px;
+	padding: 15px;
+	border: 1px solid #cccccc;
+}
+
+
+.gllacy-input ~ label {
+	position: absolute;
+	top: 25%;
+	left: 5%;
+	color: #999999;
+	transition: all 0.5s ease;
+	transform-origin: 0 0;
+}
+
+.gllacy-input:hover {
+	border: 2px solid #cccccc;
+}
+
+.gllacy-input:focus {
+	border: 0;
+	outline: 1px solid #5b9ddf;
+}
+
+.gllacy-input:focus ~ label {
+	top: -35%;
+	left: 0;
+	color: #5b9ddf;
+	transform: scale(0.8);
 }
 
 .gllacy-catalog {
