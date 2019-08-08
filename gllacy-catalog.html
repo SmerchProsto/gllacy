@@ -16,39 +16,39 @@
 							<img class="logo-header-img" src="img/logo.png" width="154" height="64" alt="Лого Глейси">
 						</a>
 					</li>
-					<li class="main-navigation-item">
-						<a class="navigation-link active-link">Каталог</a>
-						<ul class="navigation-popup-items visibility-hidden">
-							<li class="navigation-popup-item">
-								<p>Напитки</p>
-								<ul class="popup-new-items">
-									<li class="popup-new-item">Сливочные</li>
-									<li class="popup-new-item">Щербеты</li>
-									<li class="popup-new-item">Фруктовый лед</li>
-									<li class="popup-new-item">Мелорин</li>
-								</ul>
-							</li>
-						</ul>
+					<li class="main-navigation-item active-main-navigation-item open-popup-element">
+						<a class="navigation-link active-navigation-link">Каталог</a>
 					</li>
 					<li class="main-navigation-item"><a class="navigation-link" href="#">Доставка и оплата</a></li>
 					<li class="main-navigation-item"><a class="navigation-link" href="#">О компании</a></li>
 				</ul>
 				<ul class="user-navigation-items">
 					<li class="user-navigation-item user-navigation-item-search">
-						<span class="visibility-hidden">Поиск</span>
+						<span class="visually-hidden">Поиск</span>
+						<a class="user-navigation-item-link link-search" href="#">
 							<img class="user-navigation-search-icon" src="img/search-icon.png" alt="">
 							<img class="user-navigation-search-icon search-on-icon" src="img/search-on-icon.png" alt="">
-							<section class="user-search-popup visibility-hidden">
-								<input type="text" placeholder="Что ищем?">
-							</section>
+						</a>
+						<section class="user-search-popup">
+							<div class="input-container">
+								<input class="search-popup-input popup-input gllacy-input" id="search-popup-input" type="text" name="search">
+								<label for="search-popup-input">Что ищем?</label>
+							</div>
+						</section>
 					</li>
-					<li class="user-navigation-item">
+					<li class="user-navigation-item user-navigation-item-login">
 						<a class="user-navigation-item-link user-navigation-link-login" href="#">Вход</a>
-						<form class="user-form visibility-hidden" action="#" method="post">
-							<input type="text" placeholder="Электронная почта">
-							<input type="password" placeholder="Пароль">
+						<form class="user-form" action="#" method="post">
+							<div class="input-container">
+								<input class="popup-input user-form-input user-form-email gllacy-input" id="user-form-email" type="text" name="email">
+								<label for="user-form-email">Электронная почта</label>
+							</div>
+							<div class="input-container">
+								<input class="popup-input user-form-input user-form-password gllacy-input" id="user-form-password" type="password" name="password">
+								<label for="user-form-password">Пароль</label>
+							</div>
 							<section class="user-form-footer">
-								<input type="button" value="Войти">
+								<input class="form-footer-button" type="submit" value="Войти">
 								<ul class="user-form-items">
 									<li class="user-form-item"><a class="user-form-item-link" href="#">Забыли пароль?</a></li>
 									<li class="user-form-item"><a class="user-form-item-link" href="#">Регистрация</a></li>
@@ -56,52 +56,45 @@
 							</section>
 						</form>
 					</li>
-					<li class="user-navigation-item active-basket">
-						<a class="user-navigation-item-link user-navigation-link-basket" href="#">2 товара</a>
-						<form class="user-basket-form visibility-hidden" action="#" method="get">
+					<li class="user-navigation-item open-popup-element">
+						<a class="user-navigation-item-link user-navigation-link-basket active-link-basket open-popup-element" href="#">2 товара</a>
+						<form class="user-basket-form" action="#" method="get">
 							<ul class="user-basket-items">
 								<li class="user-basket-item">
 									<ul class="waren-data-items">
-										<li class="waren-data-item">
-											<img class="waren-data-img" src="#" alt="Фото товара">
+										<li class="waren-data-item waren-item-img">
+											<img class="waren-data-img" src="img/orange-icecream-icon.png" alt="Фото товара">
 										</li>
-										<li class="waren-data-item">
+										<li class="waren-data-item waren-data-item-description">
 											<p>Пломбир с апельсиновым джемом</p>
-											<input type="text" name="waren-name" disabled>
 										</li>
-										<li class="waren-data-item">
+										<li class="waren-data-item waren-data-item-amount">
 											<p>1,5 х 200 руб.</p>
-											<input type="text" name="waren-amount" disabled>
 										</li>
-										<li class="waren-data-item">
-											<p>300 руб</p>
-											<input type="text" name="waren-count" disabled>
+										<li class="waren-data-item waren-data-item-total">
+											<p>300 руб.</p>
 										</li>
 									</ul>
 								</li>
 								<li class="user-basket-item">
 									<ul class="waren-data-items">
-										<li class="waren-data-item">
-											<img class="waren-data-img" src="#" alt="Фото товара">
+										<li class="waren-data-item waren-item-img">
+											<img class="waren-data-img" src="img/pink-icecream-icon.png" alt="Фото товара">
 										</li>
-										<li class="waren-data-item">
+										<li class="waren-data-item waren-data-item-description">
 											<p>Клубничный пломбир с присыпкой из белого шоколада</p>
-											<input type="text" name="waren-name" disabled>
 										</li>
-										<li class="waren-data-item">
+										<li class="waren-data-item waren-data-item-amount">
 											<p>1,5 х 300 руб.</p>
-											<input type="text" name="waren-amount" disabled>
 										</li>
-										<li class="waren-data-item">
-											<p>450</p>
-											<input type="text" name="waren-count" disabled>
+										<li class="waren-data-item waren-data-item-total">
+											<p>450 руб.</p>
 										</li>
 									</ul>
 								</li>
 							</ul>
-							<p class="user-basket-form-total">Итого: <span class="total-variable">750</span> руб.</p>
-							<input type="text" name="waren-count-result" disabled>
-							<input type="button" value="Оформить заказ">
+							<p class="user-basket-form-total">Итого: 750 руб.</p>
+							<input class="user-basket-form-button" type="button" value="Оформить заказ">
 						</form>
 					</li>
 				</ul>
