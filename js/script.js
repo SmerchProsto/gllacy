@@ -1,4 +1,4 @@
-const HTML = document.getElementById('html');
+var HTML = document.documentElement;
 var mapInformationButton = document.getElementById('map-information-button');
 var feedBackForm = document.getElementById('feedback-form');
 var feedBackCloseButton = document.getElementById('feedback-close-button');
